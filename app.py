@@ -13,10 +13,11 @@ tag = tag.split("\t")
 tag = tag[-1]
 print(f"{tag}:\n")
 
-
+# finding the exchange rate table
 soup = soup.find("tbody")
 soup = soup.find_all("tr", class_="")
-# print(soup)
+
+# getting informations from each table row
 for tr in soup:
     row = tr.find_all("td")
     name = row[0].get_text().strip()
